@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home</title>
+    <title>Andy - Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="img/andy.svg">
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -38,7 +40,7 @@
           <a href="#" class="scroll" name="tokenomics">TOKENOMICS</a>
           <a href="#" class="scroll" name="staking">STAKING</a>
           <a href="#" class="scroll" name="roadmap">ROADMAP</a>
-          <a href="pdf/WHITEPAPER.pdf">WHITEPAPER</a>
+          <a href="whitepaper.html">WHITEPAPER</a>
           <a href="#" class="scroll" name="faq">FAQ</a>
           <div class="only-mobile">
             <a href="#" class="soc-m">
@@ -98,7 +100,7 @@
       <div class="wrapper">
         <h1 data-aos="fade-right" data-aos-delay="100">THE MIAMI VIBES!</h1>
         <div class="buy-row" data-aos="fade-right" data-aos-delay="300">
-          <div class="buy-box">
+          <div class="buy-box" id="buy-box">
             <h2>Buy <span>$</span>ANDY IN PRESALE NOW!</h2>
             <div class="timer">
               <div class="data">
@@ -211,7 +213,7 @@
       </div>
     </div>
 
-    <div class="about-us">
+    <div class="about-us" id="about-us">
       <img data-aos="fade-right" data-aos-delay="100" loading="lazy"
         src="img/shadow-yellow.webp" class="shadow-yellow"
         alt>
@@ -255,7 +257,7 @@
       </div>
     </div>
 
-    <div class="staking">
+    <div class="staking" id="staking">
       <img loading="lazy" src="img/shadow-yellow-right.webp"
         class="shadow-yellow" alt>
       <div class="wrapper">
@@ -330,7 +332,7 @@
       </div>
     </div>
 
-    <div class="tokenomics">
+    <div class="tokenomics" id="tokenomics">
       <div class="wrapper">
         <h3 data-aos="fade-right" data-aos-delay="100">555.555.555</h3>
         <h2 data-aos="fade-left" data-aos-delay="100">Tokenomics</h2>
@@ -359,7 +361,7 @@
       </div>
     </div>
 
-    <div class="roadmap">
+    <div class="roadmap" id="roadmap">
       <div class="wrapper">
         <h2 data-aos="fade-up" data-aos-delay="100">ROADMAP</h2>
 
@@ -406,7 +408,7 @@
       </div>
     </div>
 
-    <div class="faq">
+    <div class="faq" id="faq">
       <img loading="lazy" src="img/about-us-bg.webp" class="bg-top" alt>
       <div class="wrapper">
         <h2 data-aos="fade-up" data-aos-delay="100">Frequently Asked
@@ -421,12 +423,13 @@
             <div class="answer">
               <div class="in">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Perspiciatis voluptatibus dignissimos, nisi laborum unde,
-                  voluptas
-                  expedita temporibus debitis facere ex quos! Unde recusandae,
-                  quia
-                  repellat quibusdam fugiat obcaecati quod odit.
+                  $ANDY Coin is more than just a meme coin – it's a cultural
+                  movement. Inspired by Andy, a hip-hop sensation from Miami,
+                  this coin embodies the energy of social media and the world of
+                  blockchain. As Andy goes viral on TikTok, YouTube, and
+                  Instagram, $ANDY Coin grows with him, bringing the fun of
+                  hip-hop and digital innovation together. It’s the perfect
+                  blend of music, memes, and technology!
                 </p>
               </div>
             </div>
@@ -439,12 +442,11 @@
             <div class="answer">
               <div class="in">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Perspiciatis voluptatibus dignissimos, nisi laborum unde,
-                  voluptas
-                  expedita temporibus debitis facere ex quos! Unde recusandae,
-                  quia
-                  repellat quibusdam fugiat obcaecati quod odit.
+                  Staking is a breeze! Simply connect your wallet to our
+                  website's staking page, choose the amount of $ANDY Coin you
+                  want to stake, and you’re good to go. By staking your coins,
+                  you’ll earn additional rewards while supporting the growth of
+                  Andy’s journey to stardom!
                 </p>
               </div>
             </div>
@@ -457,12 +459,11 @@
             <div class="answer">
               <div class="in">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Perspiciatis voluptatibus dignissimos, nisi laborum unde,
-                  voluptas
-                  expedita temporibus debitis facere ex quos! Unde recusandae,
-                  quia
-                  repellat quibusdam fugiat obcaecati quod odit.
+                  The presale will end as soon as our target is reached or once
+                  we announce its official close. Stay up-to-date with our
+                  Telegram and Twitter channels to know exactly when it’s
+                  happening. Get in early to secure your share of $ANDY Coin
+                  before the big launch!
                 </p>
               </div>
             </div>
@@ -475,12 +476,11 @@
             <div class="answer">
               <div class="in">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Perspiciatis voluptatibus dignissimos, nisi laborum unde,
-                  voluptas
-                  expedita temporibus debitis facere ex quos! Unde recusandae,
-                  quia
-                  repellat quibusdam fugiat obcaecati quod odit.
+                  The official launch of $ANDY Coin will happen on Radium. For
+                  live updates on price and market activity, check platforms
+                  like Dextool or Dexscreener. Join the excitement as Andy’s
+                  rise to fame hits the blockchain!
+
                 </p>
               </div>
             </div>
@@ -493,12 +493,11 @@
             <div class="answer">
               <div class="in">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Perspiciatis voluptatibus dignissimos, nisi laborum unde,
-                  voluptas
-                  expedita temporibus debitis facere ex quos! Unde recusandae,
-                  quia
-                  repellat quibusdam fugiat obcaecati quod odit.
+                  There will be a total of 555,555,555 $ANDY Coins available,
+                  and that’s it. No additional coins will be minted in the
+                  future, ensuring the supply is fixed and the value remains
+                  scarce. Once they’re gone, they’re gone!
+
                 </p>
               </div>
             </div>
@@ -511,12 +510,14 @@
             <div class="answer">
               <div class="in">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Perspiciatis voluptatibus dignissimos, nisi laborum unde,
-                  voluptas
-                  expedita temporibus debitis facere ex quos! Unde recusandae,
-                  quia
-                  repellat quibusdam fugiat obcaecati quod odit.
+                  $ANDY Coin is designed to be fun and entertaining. As with all
+                  meme coins, the value can fluctuate wildly, particularly
+                  between the presale and the live exchange launch. There’s no
+                  guarantee of profits, and we encourage everyone to only invest
+                  what they’re comfortable losing. Remember, this is a
+                  community-driven project meant for enjoyment, not for
+                  financial speculation. Please keep this in mind and don’t
+                  treat it as financial advice.
                 </p>
               </div>
             </div>

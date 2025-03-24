@@ -173,3 +173,43 @@ $(".scroll").click(function (e) {
     1000
   );
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Function to adjust scroll position
+  function adjustScroll() {
+    if (window.location.hash) {
+      const targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: targetElement.offsetTop - 100, // Move 100px up
+            behavior: "smooth",
+          });
+        }, 100); // Small delay to allow page rendering
+      }
+    }
+  }
+
+  // Apply on page load
+  adjustScroll();
+
+  // Apply on link click within the page
+  document.querySelectorAll('a[href^="index.html#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default jump
+
+      const targetId = this.getAttribute("href").split("#")[1];
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: "smooth",
+        });
+
+        // Update URL without jumping
+        history.pushState(null, null, `#${targetId}`);
+      }
+    });
+  });
+});

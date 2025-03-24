@@ -1494,3 +1494,42 @@ body > .skiptranslate {
 	position: absolute;
 	opacity: 0;
 }
+
+.wallpaper {
+	min-height: 100vh;
+	background-color: black;
+	position: relative;
+	.wrapper {
+		position: relative;
+		.downloadwh {
+			position: absolute;
+			background-color: #f7e10f;
+
+			display: inline-flex;
+			color: #fff;
+			padding: 14px 16px;
+			letter-spacing: 0rem;
+			border-radius: 5px;
+			transition: all ease 0.5s;
+			background-color: #1fa74e;
+			min-width: 162px;
+			align-items: center;
+			justify-content: center;
+			font-family: luckiest;
+			text-decoration: none;
+
+			right: 25px;
+			top: 150px;
+			font-size: 20px;
+			&:hover {
+				background-color: #f6e00e;
+				color: #000;
+			}
+		}
+	}
+	img {
+		margin: auto;
+		display: block;
+		max-width: 100%;
+	}
+}

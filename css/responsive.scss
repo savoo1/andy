@@ -90,6 +90,18 @@
 }
 
 @media (max-width: 1200px) {
+    .wallpaper {
+        padding-top: 200px;
+    }
+    .wallpaper .wrapper .downloadwh {
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: 300px;
+        margin-top: -40px;
+    }
+
     .wrapper,
     .navbar,
     .staking .wrapper {
