@@ -115,11 +115,20 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
     document.getElementById("languageDropdown").classList.toggle("show");
+
+    $(".navbar.active .left-side").animate(
+      {
+        scrollTop: $(".navbar.active .left-side")[0].scrollHeight,
+      },
+      1000
+    );
   });
 
 document.querySelectorAll(".dropdown a").forEach((item) => {
   item.addEventListener("click", function (event) {
     event.preventDefault();
+    $(".navbar").removeClass("active");
+
     let selectedLang = this.getAttribute("data-lang");
     document.getElementById("languageSelector").innerHTML =
       this.innerText +
@@ -156,6 +165,7 @@ $(".scroll").click(function (e) {
   e.preventDefault();
   $("nav").removeClass("nav_active");
   var nameof = "." + $(this).attr("name");
+  $(".navbar").removeClass("active");
   $("html, body").animate(
     {
       scrollTop: $(nameof).offset().top - 150,

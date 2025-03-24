@@ -121,10 +121,11 @@ img {
   justify-content: center;
   gap: 21px;
 }
-.navbar .right-side .languge {
+
+.languge {
   position: relative;
 }
-.navbar .right-side .languge .dropdown {
+.languge .dropdown {
   position: absolute;
   top: 55px;
   left: 0;
@@ -136,21 +137,21 @@ img {
   flex-direction: column;
   z-index: 10;
 }
-.navbar .right-side .languge .dropdown a {
+.languge .dropdown a {
   padding: 10px;
   color: #fff;
   text-decoration: none;
   display: block;
   transition: background-color 0.3s ease;
 }
-.navbar .right-side .languge .dropdown a:hover {
+.languge .dropdown a:hover {
   background-color: #f6e00e;
   color: #000;
 }
-.navbar .right-side .languge .show {
+.languge .show {
   display: flex;
 }
-.navbar .right-side .languge .choosen {
+.languge .choosen {
   display: inline-flex;
   color: #fff;
   text-decoration: unset;
@@ -163,16 +164,17 @@ img {
   background-color: #1a1a1a;
   align-items: center;
   justify-content: center;
+  display: flex !important;
 }
-.navbar .right-side .languge .choosen svg path {
+.languge .choosen svg path {
   fill: #fff;
   transition: all ease 0.5s;
 }
-.navbar .right-side .languge .choosen:hover {
+.languge .choosen:hover {
   background-color: #f6e00e;
   color: #000;
 }
-.navbar .right-side .languge .choosen:hover svg path {
+.languge .choosen:hover svg path {
   fill: #000;
 }
 
