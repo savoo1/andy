@@ -216,6 +216,7 @@ $(document).ready(function () {
         sectionInView = true; // Set flag to true if section is in view
         $(".scroll").removeClass("active"); // Remove active from all links
         $(this).addClass("active"); // Add active to the current link
+        $(".navbar").removeClass("active");
       }
     });
 
