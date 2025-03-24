@@ -9,6 +9,75 @@ $(".navbar .lines").click(function (e) {
   }
 });
 
+$(document).ready(function () {
+  $(".language-switcher").each(function () {
+    let $dropdown = $(this).find(".language-dropdown");
+    let $chosen = $(this).find(".choosen");
+
+    // Function to update the language icon based on current language
+    function updateLanguageIcon() {
+      // Get stored language, or default to current language
+      let savedLang = localStorage.getItem("language") || "en"; // Adjust this based on your needs
+      let $selectedItem = $dropdown.find(`li[data-lang="${savedLang}"]`);
+
+      if ($selectedItem.length) {
+        let flag = $selectedItem.find("img").attr("src");
+        let text = $selectedItem.text().trim();
+
+        // Update chosen language display
+        $chosen.html(
+          `<img src="${flag}" class="flag-icon"> ${text} <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.99995 11.1301C8.67995 11.1301 8.34993 11.007 8.10993 10.7611L0.369941 3.0215C-0.120059 2.5291 -0.120059 1.7309 0.369941 1.2387C0.859941 0.746604 1.65997 0.746604 2.14997 1.2387L8.99995 8.08721L15.8499 1.23901C16.3399 0.746805 17.14 0.746805 17.63 1.23901C18.12 1.73111 18.12 2.5294 17.63 3.0217L9.88996 10.7614C9.63996 11.0072 9.31995 11.1301 8.99995 11.1301Z"/></svg>`
+        );
+      }
+    }
+
+    // Run on load to set the initial icon
+    updateLanguageIcon();
+
+    // Toggle dropdown
+    $chosen.on("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      $dropdown.toggle();
+    });
+
+    // Hide dropdown when clicking outside
+    $(document).on("click", function (event) {
+      if (
+        !$chosen.is(event.target) &&
+        !$dropdown.is(event.target) &&
+        $dropdown.has(event.target).length === 0
+      ) {
+        $dropdown.hide();
+      }
+    });
+
+    // Change Language - Using event delegation for list items
+    $dropdown.on("click", "li", function () {
+      let lang = $(this).data("lang");
+      let flag = $(this).find("img").attr("src");
+      let text = $(this).text().trim();
+
+      // Update selected language display
+      $chosen.html(
+        `<img src="${flag}" class="flag-icon"> ${text} <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.99995 11.1301C8.67995 11.1301 8.34993 11.007 8.10993 10.7611L0.369941 3.0215C-0.120059 2.5291 -0.120059 1.7309 0.369941 1.2387C0.859941 0.746604 1.65997 0.746604 2.14997 1.2387L8.99995 8.08721L15.8499 1.23901C16.3399 0.746805 17.14 0.746805 17.63 1.23901C18.12 1.73111 18.12 2.5294 17.63 3.0217L9.88996 10.7614C9.63996 11.0072 9.31995 11.1301 8.99995 11.1301Z"/></svg>`
+      );
+
+      // Update language in localStorage
+      localStorage.setItem("language", lang);
+
+      // Force Google Translate to change language
+      let googleTranslateCombo = document.querySelector(".goog-te-combo");
+      if (googleTranslateCombo) {
+        googleTranslateCombo.value = lang;
+        googleTranslateCombo.dispatchEvent(new Event("change"));
+      }
+
+      $dropdown.hide(); // Hide dropdown after selection
+    });
+  });
+});
+
 const labels = [
   "JAN-2025",
   "FEB-2025",
@@ -110,68 +179,74 @@ $(".faq-card .question").click(function (e) {
   }
 });
 
-document
-  .getElementById("languageSelector")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    document.getElementById("languageDropdown").classList.toggle("show");
+// $(".scroll").click(function (e) {
+//   e.preventDefault();
+//   $("nav").removeClass("nav_active");
+//   var nameof = "." + $(this).attr("name");
+//   $(".navbar").removeClass("active");
+//   $("html, body").animate(
+//     {
+//       scrollTop: $(nameof).offset().top - 150,
+//     },
+//     1000
+//   );
+// });
 
-    $(".navbar.active .left-side").animate(
-      {
-        scrollTop: $(".navbar.active .left-side")[0].scrollHeight,
-      },
-      1000
-    );
+$(document).ready(function () {
+  // Function to detect the section in view and activate the corresponding navbar link
+  function checkActiveSection() {
+    var scrollPos = $(document).scrollTop();
+    var sectionInView = false; // Flag to check if any section is in view
+
+    // Loop through each navbar link
+    $(".scroll").each(function () {
+      var sectionID = $(this).attr("href"); // Get the href (section ID)
+
+      // Skip links that don't have valid href (like #)
+      if (sectionID === "#") return;
+
+      // Get the section by using the 'href' attribute (this links to a specific section)
+      var section = $(sectionID);
+
+      // Check if the section is in view (considering the section's offset and height)
+      if (
+        section.offset().top - 150 <= scrollPos && // Adjust for offset
+        section.offset().top + section.height() - 150 > scrollPos
+      ) {
+        sectionInView = true; // Set flag to true if section is in view
+        $(".scroll").removeClass("active"); // Remove active from all links
+        $(this).addClass("active"); // Add active to the current link
+      }
+    });
+
+    // If no section is in view, remove active from all navbar links
+    if (!sectionInView) {
+      $(".scroll").removeClass("active");
+    }
+  }
+
+  // Detect when the page is scrolled and check for the active section
+  $(window).on("scroll", function () {
+    checkActiveSection();
   });
 
-document.querySelectorAll(".dropdown a").forEach((item) => {
-  item.addEventListener("click", function (event) {
-    event.preventDefault();
-    $(".navbar").removeClass("active");
-
-    let selectedLang = this.getAttribute("data-lang");
-    document.getElementById("languageSelector").innerHTML =
-      this.innerText +
-      `<svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8.99995 11.1301C8.67995 11.1301 8.34993 11.007 8.10993 10.7611L0.369941 3.0215C-0.120059 2.5291 -0.120059 1.7309 0.369941 1.2387C0.859941 0.746604 1.65997 0.746604 2.14997 1.2387L8.99995 8.08721L15.8499 1.23901C16.3399 0.746805 17.14 0.746805 17.63 1.23901C18.12 1.73111 18.12 2.5294 17.63 3.0217L9.88996 10.7614C9.63996 11.0072 9.31995 11.1301 8.99995 11.1301Z"/>
-        </svg>`;
-
-    document.getElementById("languageDropdown").classList.remove("show");
-
-    // Call Google Translate API (if you integrate it)
-    googleTranslate(selectedLang);
+  // Smooth scrolling when clicking on navbar links
+  $(".scroll").click(function (e) {
+    e.preventDefault();
+    var targetSection = $(this).attr("href"); // Get the section linked by the anchor
+    if (targetSection !== "#") {
+      // Ensure we don't try to scroll to "#" if it's not a valid section
+      $("html, body").animate(
+        {
+          scrollTop: $(targetSection).offset().top - 150, // Adjust scroll position for nav height
+        },
+        1000
+      );
+    }
   });
-});
 
-// Close dropdown when clicking outside
-document.addEventListener("click", function (event) {
-  if (!document.querySelector(".languge").contains(event.target)) {
-    document.getElementById("languageDropdown").classList.remove("show");
-  }
-});
-
-// Function to handle Google Translate API (optional)
-function googleTranslate(lang) {
-  let translateElement = document.querySelector(".goog-te-combo"); // Google Translate dropdown
-  if (translateElement) {
-    translateElement.value = lang;
-    translateElement.dispatchEvent(new Event("change")); // Simulate user changing language
-  } else {
-    console.error("Google Translate dropdown not found.");
-  }
-}
-
-$(".scroll").click(function (e) {
-  e.preventDefault();
-  $("nav").removeClass("nav_active");
-  var nameof = "." + $(this).attr("name");
-  $(".navbar").removeClass("active");
-  $("html, body").animate(
-    {
-      scrollTop: $(nameof).offset().top - 150,
-    },
-    1000
-  );
+  // Initial check on page load
+  checkActiveSection();
 });
 
 document.addEventListener("DOMContentLoaded", function () {

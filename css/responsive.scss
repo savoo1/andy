@@ -121,7 +121,7 @@
         display: flex;
         flex-direction: column;
         gap: 7px;
-        padding: 10px;
+        padding: 5px;
         margin-left: 15px;
         cursor: pointer;
         .line {
@@ -275,6 +275,9 @@
     .roadmap .conent .box2 {
         right: calc(50% - 450px);
     }
+    .roadmap .conent .box4 {
+        right: calc(50% - 450px);
+    }
     .faq h2,
     .roadmap h2,
     .tokenomics .wrapper h2,
@@ -310,6 +313,9 @@
     .navbar,
     .staking .wrapper {
         max-width: 700px;
+    }
+    .roadmap .conent .line {
+        height: 920px;
     }
     .hero h1 {
         font-size: 80px;
@@ -450,6 +456,10 @@
         top: 550px;
         bottom: unset;
     }
+    .roadmap .conent .line .dot4 {
+        top: 780px;
+        bottom: unset;
+    }
     .roadmap .conent {
         padding-left: 70px;
     }
@@ -503,6 +513,19 @@
     .join-us {
         padding-bottom: 0;
     }
+
+    footer .inside {
+        flex-wrap: wrap;
+        p {
+            order: 3;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    }
+    .language-dropdown li:hover {
+        background-color: transparent;
+        color: #fff;
+    }
 }
 
 @media (max-width: 700px) {
@@ -548,6 +571,18 @@
     .shadow-yellow,
     .shadow-yellow-right {
         display: none !important;
+    }
+
+    .language-switcher .choosen {
+        font-size: 0;
+        margin-right: 5px;
+        font,
+        span,
+        svg {
+            display: none;
+        }
+        padding: 0;
+        border: 0;
     }
 }
 
@@ -654,6 +689,9 @@
     .roadmap .conent .line .dot3 {
         top: 620px;
     }
+    .roadmap .conent .line .dot4 {
+        top: 900px;
+    }
     .roadmap .conent .box h3 {
         padding-right: 100px;
     }
@@ -666,6 +704,18 @@
     }
 }
 
+@media (max-width: 470px) {
+    .roadmap .conent .line .dot2 {
+        top: 450px;
+    }
+    .roadmap .conent .line .dot3 {
+        top: 800px;
+    }
+    .roadmap .conent .line .dot4 {
+        top: 1100px;
+    }
+}
+
 @media (max-width: 400px) {
     .lines {
         margin-left: 0;
@@ -674,11 +724,17 @@
         padding: 0 10px;
     }
     .buy-now .in {
+        min-width: 100px;
+        font-size: 16px;
+    }
+    .navbar .buy-now .in {
         min-width: unset;
-        font-size: 18px;
+        font-size: 16px;
+        padding: 8px;
+        max-width: 100px;
     }
     .navbar .logo {
-        max-width: 80px;
+        max-width: 70px;
     }
     .hero h1 {
         font-size: 50px;

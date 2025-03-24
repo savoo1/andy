@@ -115,6 +115,10 @@ img {
   background-color: #f6e00e;
   color: #000;
 }
+.navbar .left-side .active {
+  background-color: #f6e00e;
+  color: #000;
+}
 .navbar .right-side {
   display: flex;
   align-items: center;
@@ -122,10 +126,10 @@ img {
   gap: 21px;
 }
 
-.languge {
+.language-switcher {
   position: relative;
 }
-.languge .dropdown {
+.language-switcher .dropdown {
   position: absolute;
   top: 55px;
   left: 0;
@@ -137,21 +141,21 @@ img {
   flex-direction: column;
   z-index: 10;
 }
-.languge .dropdown a {
+.language-switcher .dropdown a {
   padding: 10px;
   color: #fff;
   text-decoration: none;
   display: block;
   transition: background-color 0.3s ease;
 }
-.languge .dropdown a:hover {
+.language-switcher .dropdown a:hover {
   background-color: #f6e00e;
   color: #000;
 }
-.languge .show {
+.language-switcher .show {
   display: flex;
 }
-.languge .choosen {
+.language-switcher .choosen {
   display: inline-flex;
   color: #fff;
   text-decoration: unset;
@@ -166,16 +170,67 @@ img {
   justify-content: center;
   display: flex !important;
 }
-.languge .choosen svg path {
+.language-switcher .choosen svg path {
   fill: #fff;
   transition: all ease 0.5s;
 }
-.languge .choosen:hover {
+.language-switcher .choosen:hover {
   background-color: #f6e00e;
   color: #000;
 }
-.languge .choosen:hover svg path {
+.language-switcher .choosen:hover svg path {
   fill: #000;
+}
+
+.language-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.language-switcher .choosen {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1a1a1a;
+  border: 1px solid #f6e00e;
+  border-radius: 5px;
+  padding: 5px 0;
+  display: none;
+  width: 180px;
+  list-style: none;
+  z-index: 100;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.language-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.language-dropdown li img {
+  max-width: 20px;
+}
+
+.language-dropdown li:hover {
+  background-color: #f6e00e;
+  color: black;
+}
+
+.flag-icon {
+  width: 20px;
+  height: 14px;
 }
 
 .buy-now {
@@ -860,7 +915,7 @@ img {
 }
 .roadmap .conent .line {
   width: 23px;
-  height: 782px;
+  height: 1050px;
   background-color: #f7e10f;
   margin: auto;
   border-radius: 10px;
@@ -885,6 +940,9 @@ img {
   top: 458px;
 }
 .roadmap .conent .line .dot3 {
+  top: 750px;
+}
+.roadmap .conent .line .dot4 {
   bottom: -14px;
 }
 .roadmap .conent .box {
@@ -945,6 +1003,10 @@ img {
 .roadmap .conent .box3 {
   top: 644px;
   left: calc(50% - 530px);
+}
+.roadmap .conent .box4 {
+  top: 950px;
+  right: calc(50% - 530px);
 }
 
 .faq {
@@ -1158,17 +1220,21 @@ footer .inside {
   padding: 13px 25px;
   align-items: center;
   border-radius: 9px;
+  gap: 10px;
+}
+footer .inside img {
+  min-width: 100px;
 }
 footer p {
   font-family: "luckiest", cursive;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #fff;
   max-width: 1293px;
   margin: auto;
   text-align: center;
   letter-spacing: 0.02rem;
-  margin-top: 30px;
+  max-width: 1000px;
 }
 
 /* Hide the Google Translate top bar */

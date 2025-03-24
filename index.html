@@ -7,9 +7,7 @@
 
     <link rel="icon" type="image/x-icon" href="img/andy.svg">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- for loading animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -20,28 +18,27 @@
 
     <script type="text/javascript">
       function googleTranslateElementInit() {
-        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        new google.translate.TranslateElement({ }, 'google_translate_element');
       }
     </script>
-    <script type="text/javascript"
-      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   </head>
   <body>
-    <div id="google_translate_element"></div>
 
     <div class="navbar" data-aos="fade-down" data-aos-delay="100">
       <div class="full-wrap">
         <div class="left-side">
-          <a href="#" class="scroll" name="buy-box">
+          <a href="#buy-box" class="scroll" name="buy-box">
             PRESALE
           </a>
-          <a href="#" class="scroll" name="about-us">ABOUT</a>
-          <a href="#" class="scroll" name="tokenomics">TOKENOMICS</a>
-          <a href="#" class="scroll" name="staking">STAKING</a>
-          <a href="#" class="scroll" name="roadmap">ROADMAP</a>
+          <a href="#about-us" class="scroll" name="about-us">ABOUT</a>
+          <a href="#tokenomics" class="scroll" name="tokenomics">TOKENOMICS</a>
+          <a href="#staking" class="scroll" name="staking">STAKING</a>
+          <a href="#roadmap" class="scroll" name="roadmap">ROADMAP</a>
           <a href="whitepaper.html">WHITEPAPER</a>
-          <a href="#" class="scroll" name="faq">FAQ</a>
+          <a href="#faq" class="scroll" name="faq">FAQ</a>
           <div class="only-mobile">
             <a href="#" class="soc-m">
               <img loading="lazy" src="img/tg.svg" alt>
@@ -49,9 +46,9 @@
             <a href="#" class="soc-m">
               <img loading="lazy" src="img/x.svg" alt>
             </a>
-
           </div>
         </div>
+
         <a href="index.html" class="logo">
           <img loading="lazy" src="img/logo.webp" alt="logo">
         </a>
@@ -65,23 +62,76 @@
 
         </div>
         <div class="right-side">
-          <div class="languge">
-            <a href="#" class="choosen" id="languageSelector">
-              ENGLISH
+          <div class="language-switcher">
+            <a href="#" class="choosen">
+              <img src="https://flagcdn.com/w40/gb.png" alt="English"
+                class="flag-icon">
+              <span>ENGLISH</span>
               <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M8.99995 11.1301C8.67995 11.1301 8.34993 11.007 8.10993 10.7611L0.369941 3.0215C-0.120059 2.5291 -0.120059 1.7309 0.369941 1.2387C0.859941 0.746604 1.65997 0.746604 2.14997 1.2387L8.99995 8.08721L15.8499 1.23901C16.3399 0.746805 17.14 0.746805 17.63 1.23901C18.12 1.73111 18.12 2.5294 17.63 3.0217L9.88996 10.7614C9.63996 11.0072 9.31995 11.1301 8.99995 11.1301Z" />
               </svg>
             </a>
-            <div class="dropdown" id="languageDropdown">
-              <a href="#" data-lang="en">English</a>
-              <a href="#" data-lang="es">Español</a>
-              <a href="#" data-lang="fr">Français</a>
-              <a href="#" data-lang="de">Deutsch</a>
-              <a href="#" data-lang="it">Italiano</a>
-            </div>
+
+            <ul class="language-dropdown">
+
+              <li data-lang="ar"><img src="https://flagcdn.com/w40/sa.png"
+                  alt="Arabic"> Arabic</li>
+              <li data-lang="bg"><img src="https://flagcdn.com/w40/bg.png"
+                  alt="Bulgarian"> Bulgarian</li>
+              <li data-lang="en"><img src="https://flagcdn.com/w40/gb.png"
+                  alt="English"> English</li>
+              <li data-lang="zh-CN"><img src="https://flagcdn.com/w40/cn.png"
+                  alt="Chinese (Simplified)"> Chinese (Simplified)</li>
+              <li data-lang="zh-TW"><img src="https://flagcdn.com/w40/tw.png"
+                  alt="Chinese (Traditional)"> Chinese (Traditional)</li>
+              <li data-lang="cs"><img src="https://flagcdn.com/w40/cz.png"
+                  alt="Czech"> Czech</li>
+              <li data-lang="nl"><img src="https://flagcdn.com/w40/nl.png"
+                  alt="Dutch"> Dutch</li>
+              <li data-lang="fr"><img src="https://flagcdn.com/w40/fr.png"
+                  alt="French"> French</li>
+              <li data-lang="de"><img src="https://flagcdn.com/w40/de.png"
+                  alt="German"> German</li>
+              <li data-lang="el"><img src="https://flagcdn.com/w40/gr.png"
+                  alt="Greek"> Greek</li>
+              <li data-lang="hu"><img src="https://flagcdn.com/w40/hu.png"
+                  alt="Hungarian"> Hungarian</li>
+              <li data-lang="id"><img src="https://flagcdn.com/w40/id.png"
+                  alt="Indonesian"> Indonesian</li>
+              <li data-lang="it"><img src="https://flagcdn.com/w40/it.png"
+                  alt="Italian"> Italian</li>
+              <li data-lang="ja"><img src="https://flagcdn.com/w40/jp.png"
+                  alt="Japanese"> Japanese</li>
+              <li data-lang="ko"><img src="https://flagcdn.com/w40/kr.png"
+                  alt="Korean"> Korean</li>
+              <li data-lang="pl"><img src="https://flagcdn.com/w40/pl.png"
+                  alt="Polish"> Polish</li>
+              <li data-lang="pt"><img src="https://flagcdn.com/w40/pt.png"
+                  alt="Portuguese"> Portuguese</li>
+              <li data-lang="ro"><img src="https://flagcdn.com/w40/ro.png"
+                  alt="Romanian"> Romanian</li>
+              <li data-lang="ru"><img src="https://flagcdn.com/w40/ru.png"
+                  alt="Russian"> Russian</li>
+              <li data-lang="sk"><img src="https://flagcdn.com/w40/sk.png"
+                  alt="Slovak"> Slovak</li>
+              <li data-lang="es"><img src="https://flagcdn.com/w40/es.png"
+                  alt="Spanish"> Spanish</li>
+              <li data-lang="th"><img src="https://flagcdn.com/w40/th.png"
+                  alt="Thai"> Thai</li>
+              <li data-lang="tr"><img src="https://flagcdn.com/w40/tr.png"
+                  alt="Turkish"> Turkish</li>
+              <li data-lang="vi"><img src="https://flagcdn.com/w40/vn.png"
+                  alt="Vietnamese"> Vietnamese</li>
+              <li data-lang="hi"><img src="https://flagcdn.com/w40/in.png"
+                  alt="Hindi"> Hindi</li>
+            </ul>
           </div>
+
+          <!-- Hidden Google Translate Element -->
+          <div id="google_translate_element" style="display: none;"></div>
+
           <a href="#" class="scroll buy-now" name="buy-box"><div
               class="in">
               BUY NOW
@@ -371,16 +421,17 @@
             <div class="dot dot1"></div>
             <div class="dot dot2"></div>
             <div class="dot dot3"></div>
+            <div class="dot dot4"></div>
           </div>
           <div class="box box1" data-aos="fade-left" data-aos-delay="100">
             <img loading="lazy" src="img/roadmap-avatar.webp" class="avatar"
               alt>
             <h3>STAGE 1: PRELAUNCH PHASE</h3>
             <ul>
-              <li>Community</li>
               <li>Presale</li>
-              <li>Marketing</li>
-              <li>Partnerships</li>
+              <li>Community Building</li>
+              <li>Influencer and Partnerships</li>
+              <li>Communication with the Community</li>
             </ul>
           </div>
           <div class="box box2" data-aos="fade-right" data-aos-delay="100">
@@ -388,21 +439,30 @@
               alt>
             <h3>STAGE 2: LAUNCH PHASE</h3>
             <ul>
-              <li>Radium</li>
-              <li>Liquidity</li>
-              <li>Exchange</li>
-              <li>Listing</li>
+              <li>Launch on Raydium</li>
+              <li>Viral Meme Campaigns</li>
+              <li>Rewards for Creativity</li>
+              <li>Marketing and Partnerships</li>
             </ul>
           </div>
           <div class="box box3" data-aos="fade-left" data-aos-delay="100">
             <img loading="lazy" src="img/roadmap-avatar.webp" class="avatar"
               alt>
-            <h3>STAGE 3: GROWTH PHASE</h3>
+            <h3>STAGE 3: EXPANSION PHASE</h3>
             <ul>
-              <li>Viral</li>
-              <li>TikTok, X, Telegram</li>
-              <li>Collaborations</li>
-              <li>Expansion</li>
+              <li>Exchange Listings and Partnerships</li>
+              <li>Music and Meme Initiatives</li>
+              <li>Global Community</li>
+            </ul>
+          </div>
+          <div class="box box4" data-aos="fade-left" data-aos-delay="100">
+            <img loading="lazy" src="img/roadmap-avatar.webp" class="avatar"
+              alt>
+            <h3>STAGE 4: DOMINATION PHASE</h3>
+            <ul>
+              <li>Global Growth</li>
+              <li>Interactive Events and Rewards</li>
+              <li>Sustained Development</li>
             </ul>
           </div>
         </div>
@@ -565,14 +625,17 @@
           <a href="index.html" class="logo">
             <img loading="lazy" src="img/logo.webp" alt="logo">
           </a>
+
+          <p>Disclaimer: $Andy is a meme coin made for entertainment purpose. We
+            make no promises about future value, so be responsible. Crypro may
+            be
+            unregulated in your jurisdiction. Profits may be subject to taxes.
+            Always do your own research before</p>
+
           <a href="#" class="buy-now scroll" name="buy-box"><div class="in">
               BUY NOW
             </div></a>
         </div>
-        <p>Disclaimer: $Andy is a meme coin made for entertainment purpose. We
-          make no promises about future value, so be responsible. Crypro may be
-          unregulated in your jurisdiction. Profits may be subject to taxes.
-          Always do your own research before</p>
       </div>
     </footer>
 
