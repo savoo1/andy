@@ -978,6 +978,7 @@ img {
   padding-left: 40px;
   margin-bottom: 14px;
   position: relative;
+  max-width: 310px;
 }
 .roadmap .conent .box ul li .hidden {
   font-size: 0;
