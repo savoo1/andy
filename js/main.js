@@ -179,18 +179,18 @@ $(".faq-card .question").click(function (e) {
   }
 });
 
-// $(".scroll").click(function (e) {
-//   e.preventDefault();
-//   $("nav").removeClass("nav_active");
-//   var nameof = "." + $(this).attr("name");
-//   $(".navbar").removeClass("active");
-//   $("html, body").animate(
-//     {
-//       scrollTop: $(nameof).offset().top - 150,
-//     },
-//     1000
-//   );
-// });
+$(".scroll2").click(function (e) {
+  e.preventDefault();
+  $("nav").removeClass("nav_active");
+  var nameof = "." + $(this).attr("name");
+  $(".navbar").removeClass("active");
+  $("html, body").animate(
+    {
+      scrollTop: $(nameof).offset().top - 150,
+    },
+    1000
+  );
+});
 
 $(document).ready(function () {
   // Function to detect the section in view and activate the corresponding navbar link
