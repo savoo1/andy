@@ -1,5 +1,14 @@
 AOS.init();
 
+$(".navbar .lines").click(function (e) {
+  e.preventDefault();
+  if ($(this).parent().parent().parent().hasClass("active")) {
+    $(this).parent().parent().parent().removeClass("active");
+  } else {
+    $(this).parent().parent().parent().addClass("active");
+  }
+});
+
 const labels = [
   "JAN-2025",
   "FEB-2025",
@@ -98,15 +107,6 @@ $(".faq-card .question").click(function (e) {
     $(this)
       .next()
       .css("max-height", heightinside + "px");
-  }
-});
-
-$(".navbar .lines").click(function (e) {
-  e.preventDefault();
-  if ($(this).parent().parent().parent().hasClass("active")) {
-    $(this).parent().parent().parent().removeClass("active");
-  } else {
-    $(this).parent().parent().parent().addClass("active");
   }
 });
 
