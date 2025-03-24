@@ -1194,6 +1194,9 @@ img {
 					padding-left: 40px;
 					margin-bottom: 14px;
 					position: relative;
+					.hidden {
+						font-size: 0;
+					}
 				}
 				li:before {
 					width: 14px;

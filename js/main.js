@@ -14,12 +14,10 @@ $(document).ready(function () {
     let $dropdown = $(this).find(".language-dropdown");
     let $chosen = $(this).find(".choosen");
 
-    // Function to update the language icon based on current language
-    function updateLanguageIcon() {
-      // Get stored language, or default to current language
-      let savedLang = localStorage.getItem("language") || "en"; // Adjust this based on your needs
-      let $selectedItem = $dropdown.find(`li[data-lang="${savedLang}"]`);
-
+    // Function to update the language icon based on the current language
+    function updateLanguageIcon(lang) {
+      // Get the selected language (can also be from localStorage or a default fallback)
+      let $selectedItem = $dropdown.find(`li[data-lang="${lang}"]`);
       if ($selectedItem.length) {
         let flag = $selectedItem.find("img").attr("src");
         let text = $selectedItem.text().trim();
@@ -32,7 +30,8 @@ $(document).ready(function () {
     }
 
     // Run on load to set the initial icon
-    updateLanguageIcon();
+    let initialLang = localStorage.getItem("language") || "en"; // Default to English
+    updateLanguageIcon(initialLang);
 
     // Toggle dropdown
     $chosen.on("click", function (event) {
@@ -55,18 +54,48 @@ $(document).ready(function () {
     // Change Language - Using event delegation for list items
     $dropdown.on("click", "li", function () {
       let lang = $(this).data("lang");
-      let flag = $(this).find("img").attr("src");
-      let text = $(this).text().trim();
 
-      // Update selected language display
-      $chosen.html(
-        `<img src="${flag}" class="flag-icon"> ${text} <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.99995 11.1301C8.67995 11.1301 8.34993 11.007 8.10993 10.7611L0.369941 3.0215C-0.120059 2.5291 -0.120059 1.7309 0.369941 1.2387C0.859941 0.746604 1.65997 0.746604 2.14997 1.2387L8.99995 8.08721L15.8499 1.23901C16.3399 0.746805 17.14 0.746805 17.63 1.23901C18.12 1.73111 18.12 2.5294 17.63 3.0217L9.88996 10.7614C9.63996 11.0072 9.31995 11.1301 8.99995 11.1301Z"/></svg>`
-      );
+      // Check if selected language is English
+      if (lang === "en") {
+        // Reset language settings (ensure Google Translate is disabled or reset)
+        localStorage.setItem("language", "en"); // Save English as the selected language
+        updateLanguageIcon("en"); // Update the language icon to English
 
-      // Update language in localStorage
+        // Disable Google Translate translation for English (force it to reset)
+        let googleTranslateCombo = document.querySelector(".goog-te-combo");
+        if (googleTranslateCombo) {
+          googleTranslateCombo.value = "en";
+          googleTranslateCombo.dispatchEvent(new Event("change"));
+
+          // If Google Translate is applied, reset the page to English by reloading
+          if (
+            typeof google &&
+            google.translate &&
+            google.translate.TranslateElement
+          ) {
+            let translateElement = google.translate.TranslateElement;
+            if (translateElement) {
+              google.translate.TranslateElement(
+                { pageLanguage: "en", includedLanguages: "en" },
+                "google_translate_element"
+              );
+            }
+          }
+        }
+
+        // Optionally, reload the page to reset Google Translate if needed
+        // location.reload(); // Uncomment if you want to reload the page and reset Google Translate
+
+        return; // Prevent the rest of the translation flow
+      }
+
+      // For other languages, update the icon and trigger Google Translate
+      updateLanguageIcon(lang);
+
+      // Save the selected language in localStorage
       localStorage.setItem("language", lang);
 
-      // Force Google Translate to change language
+      // Force Google Translate to change language (for non-English languages)
       let googleTranslateCombo = document.querySelector(".goog-te-combo");
       if (googleTranslateCombo) {
         googleTranslateCombo.value = lang;

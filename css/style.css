@@ -979,6 +979,9 @@ img {
   margin-bottom: 14px;
   position: relative;
 }
+.roadmap .conent .box ul li .hidden {
+  font-size: 0;
+}
 .roadmap .conent .box ul li:before {
   width: 14px;
   height: 14px;
