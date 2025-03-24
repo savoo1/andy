@@ -210,8 +210,8 @@ $(document).ready(function () {
 
       // Check if the section is in view (considering the section's offset and height)
       if (
-        section.offset().top - 150 <= scrollPos && // Adjust for offset
-        section.offset().top + section.height() - 150 > scrollPos
+        section.offset().top - 160 <= scrollPos && // Adjust for offset
+        section.offset().top + section.height() - 160 > scrollPos
       ) {
         sectionInView = true; // Set flag to true if section is in view
         $(".scroll").removeClass("active"); // Remove active from all links
