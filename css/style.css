@@ -450,11 +450,12 @@ img {
 }
 .buy-box .call-to-wallet {
   display: flex;
-  margin-top: 51px;
+  margin-top: 30px;
   padding-bottom: 3px;
   position: relative;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .buy-box .call-to-wallet a {
   font-family: Eborg;
@@ -475,14 +476,13 @@ img {
   font-size: 14px;
   display: flex;
   gap: 3px;
-  position: absolute;
   left: 0;
   right: 0;
   text-align: center;
   margin: auto;
   align-items: center;
   justify-content: center;
-  bottom: -25px;
+  margin-top: 5px;
 }
 
 .about-us {

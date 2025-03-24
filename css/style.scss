@@ -520,11 +520,12 @@ img {
 
 	.call-to-wallet {
 		display: flex;
-		margin-top: 51px;
+		margin-top: 30px;
 		padding-bottom: 3px;
 		position: relative;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
 		a {
 			font-family: Eborg;
 			color: #000;
@@ -544,14 +545,15 @@ img {
 			font-size: 14px;
 			display: flex;
 			gap: 3px;
-			position: absolute;
+			// position: absolute;
 			left: 0;
 			right: 0;
 			text-align: center;
 			margin: auto;
 			align-items: center;
 			justify-content: center;
-			bottom: -25px;
+			// bottom: -25px;
+			margin-top: 5px;
 		}
 	}
 }
