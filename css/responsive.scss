@@ -78,6 +78,15 @@
     .join-us .col2 {
         padding-top: 100px;
     }
+    .navbar .left-side a,
+    .navbar .right-side .languge,
+    .buy-now .in {
+        text-align: center;
+        align-items: center;
+    }
+    .navbar .right-side .languge {
+        margin-left: 10px;
+    }
 }
 
 @media (max-width: 1200px) {
