@@ -1,1 +1,747 @@
-/*# sourceMappingURL=responsive.css.map */
+@media (max-width: 1500px) {
+  .wrapper {
+    max-width: 1200px;
+  }
+  .navbar {
+    max-width: 1200px;
+  }
+  .navbar .left-side a {
+    padding: 10px;
+  }
+  .navbar .left-side,
+  .navbar .soc-md {
+    gap: 5px;
+  }
+  .navbar {
+    padding: 0 12px;
+  }
+  .navbar .right-side {
+    gap: 5px;
+  }
+  .buy-now .in {
+    min-width: 130px;
+  }
+  .hero h1 {
+    font-size: 90px;
+  }
+  .hero {
+    padding-top: 200px;
+  }
+  .hero .main-gif {
+    top: 181px;
+    width: 660px;
+    right: calc(50% - 610px);
+  }
+  .about-us .col2 {
+    max-width: 600px;
+  }
+  .about-us h2 {
+    font-size: 80px;
+  }
+  .about-us p {
+    font-size: 22px;
+  }
+  .about-us .col .about-us-bg {
+    left: calc(50% - 740px);
+    bottom: 121px;
+    max-width: 700px;
+  }
+  .about-us .col .main {
+    width: 540px;
+    top: 250px;
+    left: calc(50% - 670px);
+  }
+  .staking .wrapper {
+    max-width: 1200px;
+  }
+  .staking .boxes .box p {
+    font-size: 16px;
+  }
+  .roadmap .conent .box ul li {
+    font-size: 18px;
+  }
+  .staking .diagram .vertical-line {
+    margin-left: 12.5px;
+  }
+  .join-us .col2 {
+    max-width: 600px;
+  }
+  .join-us h2 {
+    font-size: 90px;
+  }
+  .join-us .col .main {
+    width: 550px;
+  }
+  .join-us .col .main {
+    left: calc(50% - 600px);
+  }
+  .join-us .col2 {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .wrapper,
+  .navbar,
+  .staking .wrapper {
+    max-width: 1000px;
+  }
+  .navbar .soc-md {
+    display: none;
+  }
+  .navbar .right-side .languge {
+    display: none;
+  }
+  .navbar {
+    padding: 0 20px;
+  }
+  .lines {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 10px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  .lines .line {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: all ease 0.5s;
+  }
+  .navbar.active .lines .line:nth-child(1) {
+    transform: rotate(50deg);
+  }
+  .navbar.active .lines .line:nth-child(2) {
+    transform: rotate(-50deg);
+    margin-top: -9px;
+  }
+  .navbar.active .lines .line:nth-child(3) {
+    transform: rotate(50deg);
+    margin-top: -9px;
+    opacity: 0;
+  }
+  .navbar.active .left-side {
+    max-height: calc(100vh - 150px);
+    opacity: 1;
+    visibility: visible;
+    overflow: auto;
+  }
+  .navbar .left-side {
+    position: fixed;
+    border: 1px solid #f6e00e;
+    border-bottom: 3px solid #f6e00e;
+    border-right: 3px solid #f6e00e;
+    border-radius: 9px;
+    background-color: rgba(0, 0, 0, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    top: 95px;
+    width: 1000px;
+    max-width: calc(100% + 3px);
+    left: 0;
+    right: auto;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 0.5s;
+  }
+  .navbar .left-side a {
+    text-align: center;
+    display: block;
+    font-size: 20px;
+  }
+  .navbar .left-side .only-mobile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .navbar .left-side .only-mobile .soc-m {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 4px 6px;
+    border-radius: 8px;
+    transition: all ease 0.5s;
+  }
+  .navbar .left-side .only-mobile .soc-m img {
+    max-width: 40px;
+  }
+  .navbar .left-side .only-mobile .soc-m:hover {
+    background-color: #f6e00e;
+    color: #000;
+  }
+  .hero .main-gif {
+    width: 570px;
+    right: calc(50% - 630px);
+  }
+  .about-us .col2 {
+    max-width: 500px;
+    padding-top: 100px;
+  }
+  .about-us .col .about-us-bg {
+    left: calc(50% - 606px);
+    bottom: 121px;
+    max-width: 580px;
+  }
+  .about-us .col .main {
+    width: 380px;
+    top: 237px;
+    left: calc(50% - 510px);
+  }
+  .about-us h2 {
+    font-size: 60px;
+  }
+  .about-us p {
+    font-size: 18px;
+  }
+  .staking .boxes .box {
+    width: calc(50% - 5px);
+  }
+  .staking .boxes {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .staking .diagram {
+    margin-top: 10px;
+  }
+  .staking .diagram .vertical-line {
+    margin-left: 9px;
+  }
+  .tokenomics .wrapper .avatar {
+    margin-top: -40px;
+    max-width: 520px;
+  }
+  .tokenomics .wrapper .clippath1 {
+    left: calc(50% - 475px);
+    top: 150px;
+  }
+  .tokenomics .wrapper .clippath2 {
+    right: calc(50% - 475px);
+    top: 150px;
+  }
+  .tokenomics .wrapper .clippath3 {
+    left: calc(50% - 475px);
+    top: 400px;
+  }
+  .tokenomics .wrapper .clippath4 {
+    right: calc(50% - 475px);
+    top: 400px;
+  }
+  .tokenomics {
+    min-height: 1000px;
+  }
+  .roadmap .conent .box1 {
+    left: calc(50% - 490px);
+  }
+  .roadmap .conent .box3 {
+    left: calc(50% - 490px);
+  }
+  .roadmap .conent .box2 {
+    right: calc(50% - 450px);
+  }
+  .faq h2,
+  .roadmap h2,
+  .tokenomics .wrapper h2,
+  .staking h2 {
+    font-size: 80px;
+  }
+  .staking .rewards {
+    margin-bottom: 0;
+  }
+  .faq .faq-card .question {
+    font-size: 22px;
+  }
+  .join-us .col .main {
+    left: calc(50% - 500px);
+    width: 500px;
+  }
+  .join-us .col2 {
+    max-width: 470px;
+  }
+  .join-us h2 {
+    font-size: 80px;
+  }
+  .join-us .buttons {
+    gap: 10px;
+  }
+  .roadmap {
+    overflow: hidden;
+  }
+}
+@media (max-width: 1000px) {
+  .wrapper,
+  .navbar,
+  .staking .wrapper {
+    max-width: 700px;
+  }
+  .hero h1 {
+    font-size: 80px;
+    line-height: 120%;
+    position: relative;
+    z-index: 10;
+    padding-top: 30px;
+    margin-bottom: 70px;
+  }
+  .hero .main-gif {
+    width: 380px;
+    right: calc(50% - 420px);
+    top: -90px;
+  }
+  .buy-box {
+    max-width: 100%;
+  }
+  .about-us .col2 {
+    max-width: 100%;
+  }
+  .about-us h2 {
+    font-size: 70px;
+  }
+  .about-us .row {
+    flex-direction: column;
+  }
+  .about-us .col .about-us-bg {
+    position: relative;
+    left: unset;
+    bottom: unset;
+    margin: auto;
+    display: block;
+    right: unset;
+  }
+  .about-us .col {
+    order: 2;
+    margin-top: 20px;
+    position: relative;
+  }
+  .about-us .col .main {
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: unset;
+    bottom: -40px;
+  }
+  .faq h2,
+  .roadmap h2,
+  .tokenomics .wrapper h2,
+  .staking h2 {
+    font-size: 70px;
+  }
+  .staking .diagram .chart-container {
+    padding-left: 50px;
+    padding-right: 0;
+  }
+  .staking .diagram .s-label {
+    display: none;
+  }
+  .staking .diagram .y-labels {
+    left: 10px;
+  }
+  .staking .diagram .chart-container {
+    height: 300px;
+  }
+  .staking .diagram .chart {
+    width: 100%;
+  }
+  .staking .diagram .bar {
+    margin: 0 2px;
+  }
+  .staking .diagram .bar-label {
+    font-size: 12px;
+    bottom: -45px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.5px;
+  }
+  .staking .diagram .x-label {
+    bottom: -90px;
+  }
+  .staking .diagram {
+    padding-bottom: 110px;
+    height: auto;
+  }
+  .staking .diagram .vertical-line {
+    margin-left: 7.5px;
+  }
+  .tokenomics .wrapper .avatar {
+    max-width: 400px;
+  }
+  .tokenomics .wrapper .clippath {
+    background-size: 100%;
+    width: 200px;
+    height: 180px;
+  }
+  .tokenomics .wrapper .clippath h4 {
+    font-size: 26px;
+    margin-bottom: 0px;
+  }
+  .tokenomics .wrapper .clippath1 {
+    left: calc(50% - 335px);
+    top: 130px;
+  }
+  .tokenomics .wrapper .clippath2 {
+    right: calc(50% - 335px);
+    top: 130px;
+  }
+  .tokenomics .wrapper .clippath4 {
+    right: calc(50% - 335px);
+    top: 320px;
+  }
+  .tokenomics .wrapper .clippath3 {
+    left: calc(50% - 335px);
+    top: 320px;
+  }
+  .tokenomics {
+    min-height: unset;
+    padding-bottom: 200px;
+  }
+  .roadmap h2 {
+    margin-top: 0;
+    padding: 0;
+  }
+  .roadmap .conent .line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .roadmap .conent .line .dot1 {
+    top: 40px;
+  }
+  .roadmap .conent .line .dot2 {
+    top: 295px;
+  }
+  .roadmap .conent .line .dot3 {
+    top: 550px;
+    bottom: unset;
+  }
+  .roadmap .conent {
+    padding-left: 70px;
+  }
+  .roadmap .conent .box {
+    position: relative;
+    top: unset;
+    left: unset;
+    right: unset;
+    min-height: unset;
+    height: unset;
+    width: calc(100% - 40px);
+    margin-bottom: 30px;
+  }
+  .roadmap .conent .box ul li {
+    margin-bottom: 10px;
+  }
+  .faq .bg-top {
+    max-width: 540px;
+  }
+  .roadmap {
+    padding-bottom: 150px;
+  }
+  .join-us .col .main {
+    max-width: 400px;
+    position: relative;
+    left: unset;
+    top: unset;
+    bottom: unset;
+    margin: auto;
+  }
+  .join-us .row {
+    flex-direction: column;
+  }
+  .join-us .row .col {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .join-us .col2 {
+    max-width: 100%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .join-us .col2 h2 {
+    text-align: center;
+  }
+  .join-us {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 700px) {
+  .tokenomics .wrapper .avatar {
+    max-width: 330px;
+    margin: auto;
+  }
+  .tokenomics .wrapper .clippath {
+    background-size: 100%;
+    width: 170px;
+    height: 140px;
+  }
+  .tokenomics .wrapper .clippath1,
+  .tokenomics .wrapper .clippath3 {
+    left: 18px;
+  }
+  .tokenomics .wrapper .clippath2,
+  .tokenomics .wrapper .clippath4 {
+    right: 18px;
+  }
+  .hero h1 {
+    font-size: 80px;
+    max-width: 50%;
+  }
+  .hero .main-gif {
+    right: unset;
+    left: 50%;
+    top: -30px;
+  }
+  .hero .wrapper {
+    padding-bottom: 40px;
+  }
+  .faq .bg-top {
+    width: 100%;
+  }
+  .about-us .col .about-us-bg {
+    max-width: 100%;
+  }
+  .roadmap .conent .box h3 {
+    padding-right: 150px;
+  }
+  .shadow-yellow,
+  .shadow-yellow-right {
+    display: none !important;
+  }
+}
+@media (max-width: 500px) {
+  .faq h2,
+  .roadmap h2,
+  .tokenomics .wrapper h2,
+  .staking h2,
+  .about-us h2 {
+    font-size: 40px;
+  }
+  .tokenomics .wrapper .avatar {
+    max-width: 290px;
+  }
+  .staking .boxes .box {
+    width: 100%;
+  }
+  .staking .rewards {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  .about-us p {
+    margin-top: 20px;
+  }
+  .hero h1 {
+    font-size: 60px;
+  }
+  .hero .main-gif {
+    top: 0px;
+    width: 260px;
+  }
+  .buy-box .timer .bigger {
+    font-size: 30px;
+  }
+  .about-us .buttons .buy-now .in {
+    padding: 20px 40px;
+  }
+  .about-us .buttons {
+    gap: 10px;
+    justify-content: center;
+  }
+  .about-us .col .main {
+    max-width: 290px;
+    top: unset;
+    bottom: -30px;
+  }
+  .about-us .col2 {
+    padding-top: 50px;
+  }
+  .staking {
+    padding-top: 0;
+  }
+  .staking .boxes {
+    margin-top: 40px;
+  }
+  .staking .diagram {
+    overflow: auto;
+  }
+  .staking .diagram .chart-container {
+    width: 500px;
+    padding-left: 100px;
+    margin-left: 50px;
+  }
+  .staking .diagram .y-labels {
+    left: 50px;
+  }
+  .staking .diagram .bar {
+    margin: 0 1px;
+  }
+  .staking .diagram .vertical-line {
+    margin-left: 5px;
+  }
+  .tokenomics .wrapper .clippath1 {
+    top: 280px;
+  }
+  .tokenomics .wrapper .clippath2 {
+    top: 280px;
+  }
+  .tokenomics .wrapper .clippath3 {
+    top: 420px;
+  }
+  .tokenomics .wrapper .clippath4 {
+    top: 420px;
+  }
+  .tokenomics {
+    padding-top: 50px;
+  }
+  .roadmap .conent .box .avatar {
+    right: -30px;
+    max-width: 100px;
+  }
+  .roadmap {
+    padding-top: 40px;
+  }
+  .roadmap .conent {
+    margin-top: 50px;
+  }
+  .roadmap .conent .line {
+    height: 100%;
+  }
+  .roadmap .conent .line .dot2 {
+    top: 335px;
+  }
+  .roadmap .conent .line .dot3 {
+    top: 620px;
+  }
+  .roadmap .conent .box h3 {
+    padding-right: 100px;
+  }
+  .join-us h2 {
+    font-size: 40px;
+  }
+  .join-us .buttons .buy-now .in {
+    min-width: unset;
+    padding: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .lines {
+    margin-left: 0;
+  }
+  .navbar {
+    padding: 0 10px;
+  }
+  .buy-now .in {
+    min-width: unset;
+    font-size: 18px;
+  }
+  .navbar .logo {
+    max-width: 80px;
+  }
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero .main-gif {
+    top: -10px;
+    width: 250px;
+  }
+  .hero .buy-row {
+    padding: 0;
+  }
+  .hero .buy-row .buy-box {
+    padding: 15px;
+  }
+  .buy-box .timer {
+    padding: 0 10px;
+  }
+  .buy-box .timer .bigger {
+    font-size: 26px;
+  }
+  .buy-box .row h3 {
+    font-size: 14px;
+  }
+  .buy-box .row h3 {
+    font-size: 14px;
+  }
+  .buy-box .call-to-wallet {
+    margin-top: 20px;
+  }
+  .buy-box .call-to-wallet p {
+    bottom: -45px;
+  }
+  .about-us .buttons {
+    flex-wrap: wrap;
+  }
+  .about-us .buttons .buy-now {
+    min-width: 100%;
+  }
+  .about-us .buttons .buy-now .in {
+    width: 100%;
+  }
+  .staking .title {
+    gap: 20px;
+  }
+  .staking .diagram .chart-container {
+    margin-left: 0;
+  }
+  .staking .diagram .chart-title {
+    width: 100%;
+  }
+  .staking .diagram .x-label {
+    width: 100%;
+    left: unset;
+    right: unset;
+    transform: unset;
+  }
+  .tokenomics .wrapper .clippath {
+    width: 146px;
+  }
+  .roadmap .conent .line {
+    display: none;
+  }
+  .roadmap .conent .box {
+    width: calc(100% - 30px);
+  }
+  .roadmap .conent {
+    padding-left: 0;
+  }
+  .roadmap .conent .box h3 {
+    padding-right: 50px;
+  }
+  .join-us .buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .join-us .buttons .buy-now {
+    width: 100%;
+  }
+  .join-us .buttons .buy-now .in {
+    width: 100%;
+  }
+  .staking .diagram {
+    margin-left: 0;
+    align-items: start;
+  }
+  .staking .diagram .chart-container {
+    padding-left: 30px;
+  }
+  .staking .diagram .y-labels {
+    left: -10px;
+  }
+  .staking .diagram .chart-container {
+    width: 540px;
+  }
+  .staking .diagram .vertical-line {
+    margin-left: 7px;
+  }
+}/*# sourceMappingURL=responsive.css.map */

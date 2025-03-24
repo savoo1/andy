@@ -1,3 +1,5 @@
+AOS.init();
+
 const labels = [
   "JAN-2025",
   "FEB-2025",
@@ -97,4 +99,67 @@ $(".faq-card .question").click(function (e) {
       .next()
       .css("max-height", heightinside + "px");
   }
+});
+
+$(".navbar .lines").click(function (e) {
+  e.preventDefault();
+  if ($(this).parent().parent().parent().hasClass("active")) {
+    $(this).parent().parent().parent().removeClass("active");
+  } else {
+    $(this).parent().parent().parent().addClass("active");
+  }
+});
+
+document
+  .getElementById("languageSelector")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("languageDropdown").classList.toggle("show");
+  });
+
+document.querySelectorAll(".dropdown a").forEach((item) => {
+  item.addEventListener("click", function (event) {
+    event.preventDefault();
+    let selectedLang = this.getAttribute("data-lang");
+    document.getElementById("languageSelector").innerHTML =
+      this.innerText +
+      `<svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.99995 11.1301C8.67995 11.1301 8.34993 11.007 8.10993 10.7611L0.369941 3.0215C-0.120059 2.5291 -0.120059 1.7309 0.369941 1.2387C0.859941 0.746604 1.65997 0.746604 2.14997 1.2387L8.99995 8.08721L15.8499 1.23901C16.3399 0.746805 17.14 0.746805 17.63 1.23901C18.12 1.73111 18.12 2.5294 17.63 3.0217L9.88996 10.7614C9.63996 11.0072 9.31995 11.1301 8.99995 11.1301Z"/>
+        </svg>`;
+
+    document.getElementById("languageDropdown").classList.remove("show");
+
+    // Call Google Translate API (if you integrate it)
+    googleTranslate(selectedLang);
+  });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function (event) {
+  if (!document.querySelector(".languge").contains(event.target)) {
+    document.getElementById("languageDropdown").classList.remove("show");
+  }
+});
+
+// Function to handle Google Translate API (optional)
+function googleTranslate(lang) {
+  let translateElement = document.querySelector(".goog-te-combo"); // Google Translate dropdown
+  if (translateElement) {
+    translateElement.value = lang;
+    translateElement.dispatchEvent(new Event("change")); // Simulate user changing language
+  } else {
+    console.error("Google Translate dropdown not found.");
+  }
+}
+
+$(".scroll").click(function (e) {
+  e.preventDefault();
+  $("nav").removeClass("nav_active");
+  var nameof = "." + $(this).attr("name");
+  $("html, body").animate(
+    {
+      scrollTop: $(nameof).offset().top - 150,
+    },
+    1000
+  );
 });

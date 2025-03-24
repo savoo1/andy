@@ -9,31 +9,61 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"></script>
 
+    <!-- for loading animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   </head>
   <body>
+    <div id="google_translate_element"></div>
 
-    <div class="navbar">
+    <div class="navbar" data-aos="fade-down" data-aos-delay="100">
       <div class="full-wrap">
         <div class="left-side">
-          <a href>
+          <a href="#" class="scroll" name="buy-box">
             PRESALE
           </a>
-          <a href>ABOUT</a>
-          <a href>TOKENOMICS</a>
-          <a href>STAKING</a>
-          <a href>ROADMAP</a>
-          <a href>WHITEPAPER</a>
-          <a href>FAQ</a>
+          <a href="#" class="scroll" name="about-us">ABOUT</a>
+          <a href="#" class="scroll" name="tokenomics">TOKENOMICS</a>
+          <a href="#" class="scroll" name="staking">STAKING</a>
+          <a href="#" class="scroll" name="roadmap">ROADMAP</a>
+          <a href="pdf/WHITEPAPER.pdf">WHITEPAPER</a>
+          <a href="#" class="scroll" name="faq">FAQ</a>
+          <div class="only-mobile">
+            <a href="#" class="soc-m">
+              <img loading="lazy" src="img/tg.svg" alt>
+            </a>
+            <a href="#" class="soc-m">
+              <img loading="lazy" src="img/x.svg" alt>
+            </a>
+          </div>
         </div>
-        <a href class="logo">
-          <img loading="lazy" src="img/logo.png" alt="logo">
+        <a href="#" class="logo">
+          <img loading="lazy" src="img/logo.webp" alt="logo">
         </a>
+        <div class="soc-md">
+          <a href="#" class="soc-m">
+            <img loading="lazy" src="img/tg.svg" alt>
+          </a>
+          <a href="#" class="soc-m">
+            <img loading="lazy" src="img/x.svg" alt>
+          </a>
+
+        </div>
         <div class="right-side">
           <div class="languge">
-            <a href class="choosen">
+            <a href="#" class="choosen" id="languageSelector">
               ENGLISH
               <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -41,18 +71,32 @@
                   d="M8.99995 11.1301C8.67995 11.1301 8.34993 11.007 8.10993 10.7611L0.369941 3.0215C-0.120059 2.5291 -0.120059 1.7309 0.369941 1.2387C0.859941 0.746604 1.65997 0.746604 2.14997 1.2387L8.99995 8.08721L15.8499 1.23901C16.3399 0.746805 17.14 0.746805 17.63 1.23901C18.12 1.73111 18.12 2.5294 17.63 3.0217L9.88996 10.7614C9.63996 11.0072 9.31995 11.1301 8.99995 11.1301Z" />
               </svg>
             </a>
+            <div class="dropdown" id="languageDropdown">
+              <a href="#" data-lang="en">English</a>
+              <a href="#" data-lang="es">Español</a>
+              <a href="#" data-lang="fr">Français</a>
+              <a href="#" data-lang="de">Deutsch</a>
+              <a href="#" data-lang="it">Italiano</a>
+            </div>
           </div>
-          <a href class="buy-now"><div class="in">
+          <a href="#" class="buy-now"><div class="in">
               BUY NOW
             </div></a>
+
+          <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
         </div>
+
       </div>
     </div>
 
     <div class="hero">
       <div class="wrapper">
-        <h1>THE MIAMI VIBES!</h1>
-        <div class="buy-row">
+        <h1 data-aos="fade-right" data-aos-delay="100">THE MIAMI VIBES!</h1>
+        <div class="buy-row" data-aos="fade-right" data-aos-delay="300">
           <div class="buy-box">
             <h2>Buy <span>$</span>ANDY IN PRESALE NOW!</h2>
             <div class="timer">
@@ -161,41 +205,47 @@
           </div>
         </div>
 
-        <img src="img/hero.gif" class="main-gif" alt="main gif">
+        <img data-aos="fade-left" data-aos-delay="400" src="img/hero.gif"
+          class="main-gif" alt="main gif">
       </div>
     </div>
 
     <div class="about-us">
-      <img loading="lazy" src="img/shadow-yellow.png" class="shadow-yellow" alt>
+      <img data-aos="fade-right" data-aos-delay="100" loading="lazy"
+        src="img/shadow-yellow.webp" class="shadow-yellow"
+        alt>
       <div class="wrapper">
         <div class="row">
           <div class="col">
-            <img loading="lazy" src="img/about-us-bg.png" class="about-us-bg"
+            <img loading="lazy" src="img/about-us-bg.webp" class="about-us-bg"
               alt>
-            <img loading="lazy" src="img/about-us.gif" class="main"
+            <img data-aos="fade-up" data-aos-delay="100" loading="lazy"
+              src="img/about-us.gif" class="main"
               alt="about-us">
           </div>
           <div class="col2">
-            <h2>ABOUT US - THe Andy coin</h2>
-            <p>
+            <h2 data-aos="fade-left" data-aos-delay="100">ABOUT US - THe Andy
+              coin</h2>
+            <p data-aos="fade-left" data-aos-delay="100">
               The Andy Coin is the meme coin taking over the Solana blockchain!
               Andy, the cheeku hip-hop star from Miami, is not just rich but
               also super talented.
             </p>
-            <p class="mr-p">He's about to go viral on TikTok, YouTube,
+            <p data-aos="fade-left" data-aos-delay="100" class="mr-p">He's about
+              to go viral on TikTok, YouTube,
               Instagram, and all the
               other major social platforms - and with every click, the Andy Coin
               gets stronger! With Andy's unique vibe and social media power,
               this coin is set to soar. Join the movement and get in before Andy
               hits the big time!</p>
-            <div class="buttons">
-              <a href class="buy-now"><div class="in">
+            <div class="buttons" data-aos="fade-left" data-aos-delay="100">
+              <a href="#" class="buy-now"><div class="in">
                   BUY NOW
                 </div></a>
-              <a href class="soc-m">
+              <a href="#" class="soc-m">
                 <img loading="lazy" src="img/tg.svg" alt>
               </a>
-              <a href class="soc-m">
+              <a href="#" class="soc-m">
                 <img loading="lazy" src="img/x.svg" alt>
               </a>
             </div>
@@ -205,42 +255,42 @@
     </div>
 
     <div class="staking">
-      <img loading="lazy" src="img/shadow-yellow-right.png"
+      <img loading="lazy" src="img/shadow-yellow-right.webp"
         class="shadow-yellow" alt>
       <div class="wrapper">
         <div class="title">
-          <h2>Staking</h2>
-          <div class="rewards">
+          <h2 data-aos="fade-right" data-aos-delay="100">Staking</h2>
+          <div data-aos="fade-left" data-aos-delay="100" class="rewards">
             365% <br>
             STAKING REWARDS
           </div>
         </div>
         <div class="boxes">
-          <div class="box">
+          <div class="box" data-aos="fade-up" data-aos-delay="100">
             <h3>STAKED BALANCE</h3>
             <p>0 <span class="ml">$Andy</span></p>
             <div class="mt"></div>
             <h3>YOUR STAKABLE</h3>
             <p>0 <span class="ml">$Andy</span></p>
 
-            <a href class="buy-now"><div class="in">
+            <a href="#" class="buy-now"><div class="in">
                 BUT AND STAKE
               </div></a>
           </div>
-          <div class="box">
+          <div class="box" data-aos="fade-up" data-aos-delay="200">
             <h3>YOUR % OF POOL</h3>
-            <a href class="i-icon"><img loading="lazy" src="img/i-white.svg"
+            <a href="#" class="i-icon"><img loading="lazy" src="img/i-white.svg"
                 alt></a>
             <p>0%</p>
             <div class="mt"></div>
             <h3>TOTAL STAKED</h3>
             <p>1,138,044,810 $Andy</p>
 
-            <a href class="buy-now red-btn"><div class="in">
+            <a href="#" class="buy-now red-btn"><div class="in">
                 WITHDRAW STAKED TOKENS
               </div></a>
           </div>
-          <div class="box">
+          <div class="box" data-aos="fade-up" data-aos-delay="300">
             <h3>ESTIMATED REWARDS</h3>
             <p>365% <span class="ml">P/A</span></p>
             <div class="mt"></div>
@@ -248,17 +298,17 @@
             <p>&#9679; MONTHLY = REWARDS % / 12</p>
             <p>&#9679; DAILY = REWARDS % / 365</p>
           </div>
-          <div class="box">
+          <div class="box" data-aos="fade-up" data-aos-delay="400">
             <h3>TOTAL REWARDS</h3>
             <p>0 <span class="ml">$Andy</span></p>
 
-            <a href class="buy-now"><div class="in">
+            <a href="#" class="buy-now"><div class="in">
                 BUT AND STAKE
               </div></a>
           </div>
         </div>
 
-        <div class="diagram">
+        <div class="diagram" data-aos="fade-up" data-aos-delay="100">
 
           <h2 class="chart-title">Total Supply</h2>
           <div class="chart-container">
@@ -281,22 +331,27 @@
 
     <div class="tokenomics">
       <div class="wrapper">
-        <h3>555.555.555</h3>
-        <h2>Tokenomics</h2>
-        <img loading="lazy" class="avatar" src="img/tokenomics-avatar.png" alt>
-        <div class="clippath clippath1">
+        <h3 data-aos="fade-right" data-aos-delay="100">555.555.555</h3>
+        <h2 data-aos="fade-left" data-aos-delay="100">Tokenomics</h2>
+        <img data-aos="fade-up" data-aos-delay="100" loading="lazy"
+          class="avatar" src="img/tokenomics-avatar.webp" alt>
+        <div class="clippath clippath1" data-aos="fade-left"
+          data-aos-delay="100">
           <div><h4>55%</h4>
             <p>PRESALE</p></div>
         </div>
-        <div class="clippath clippath2">
+        <div class="clippath clippath2" data-aos="fade-right"
+          data-aos-delay="100">
           <div><h4>20%</h4>
             <p>POOL</p></div>
         </div>
-        <div class="clippath clippath3">
+        <div class="clippath clippath3" data-aos="fade-left"
+          data-aos-delay="100">
           <div><h4>20%</h4>
             <p>TREASURY</p></div>
         </div>
-        <div class="clippath clippath4">
+        <div class="clippath clippath4" data-aos="fade-right"
+          data-aos-delay="100">
           <div><h4>5%</h4>
             <p>TEAM</p></div>
         </div>
@@ -305,7 +360,7 @@
 
     <div class="roadmap">
       <div class="wrapper">
-        <h2>ROADMAP</h2>
+        <h2 data-aos="fade-up" data-aos-delay="100">ROADMAP</h2>
 
         <div class="conent">
           <div class="line">
@@ -313,8 +368,9 @@
             <div class="dot dot2"></div>
             <div class="dot dot3"></div>
           </div>
-          <div class="box box1">
-            <img loading="lazy" src="img/roadmap-avatar.png" class="avatar" alt>
+          <div class="box box1" data-aos="fade-left" data-aos-delay="100">
+            <img loading="lazy" src="img/roadmap-avatar.webp" class="avatar"
+              alt>
             <h3>STAGE 1: PRELAUNCH PHASE</h3>
             <ul>
               <li>Community</li>
@@ -323,8 +379,9 @@
               <li>Partnerships</li>
             </ul>
           </div>
-          <div class="box box2">
-            <img loading="lazy" src="img/roadmap-avatar.png" class="avatar" alt>
+          <div class="box box2" data-aos="fade-right" data-aos-delay="100">
+            <img loading="lazy" src="img/roadmap-avatar.webp" class="avatar"
+              alt>
             <h3>STAGE 2: LAUNCH PHASE</h3>
             <ul>
               <li>Radium</li>
@@ -333,8 +390,9 @@
               <li>Listing</li>
             </ul>
           </div>
-          <div class="box box3">
-            <img loading="lazy" src="img/roadmap-avatar.png" class="avatar" alt>
+          <div class="box box3" data-aos="fade-left" data-aos-delay="100">
+            <img loading="lazy" src="img/roadmap-avatar.webp" class="avatar"
+              alt>
             <h3>STAGE 3: GROWTH PHASE</h3>
             <ul>
               <li>Viral</li>
@@ -348,12 +406,13 @@
     </div>
 
     <div class="faq">
-      <img loading="lazy" src="img/about-us-bg.png" class="bg-top" alt>
+      <img loading="lazy" src="img/about-us-bg.webp" class="bg-top" alt>
       <div class="wrapper">
-        <h2>Frequently Asked Questions</h2>
+        <h2 data-aos="fade-up" data-aos-delay="100">Frequently Asked
+          Questions</h2>
 
         <div class="faq-cards">
-          <div class="faq-card">
+          <div class="faq-card" data-aos="fade-right" data-aos-delay="100">
             <div class="question">
               <div>What is $Andy Coin?</div>
               <div class="navigator"></div>
@@ -371,7 +430,7 @@
               </div>
             </div>
           </div>
-          <div class="faq-card">
+          <div class="faq-card" data-aos="fade-right" data-aos-delay="100">
             <div class="question">
               <div>How Can I participate in staking?</div>
               <div class="navigator"></div>
@@ -389,7 +448,7 @@
               </div>
             </div>
           </div>
-          <div class="faq-card">
+          <div class="faq-card" data-aos="fade-right" data-aos-delay="100">
             <div class="question">
               <div>When does the presale end?</div>
               <div class="navigator"></div>
@@ -407,7 +466,7 @@
               </div>
             </div>
           </div>
-          <div class="faq-card">
+          <div class="faq-card" data-aos="fade-right" data-aos-delay="100">
             <div class="question">
               <div>On which exchange will the launch take place?</div>
               <div class="navigator"></div>
@@ -425,7 +484,7 @@
               </div>
             </div>
           </div>
-          <div class="faq-card">
+          <div class="faq-card" data-aos="fade-right" data-aos-delay="100">
             <div class="question">
               <div>What is the maximum supply of $andy coins?</div>
               <div class="navigator"></div>
@@ -443,7 +502,7 @@
               </div>
             </div>
           </div>
-          <div class="faq-card">
+          <div class="faq-card" data-aos="fade-right" data-aos-delay="100">
             <div class="question">
               <div>Important Disclaimer about $andy coin as a meme coin</div>
               <div class="navigator"></div>
@@ -467,25 +526,28 @@
     </div>
 
     <div class="join-us">
-      <img loading="lazy" src="img/shadow-yellow.png" class="shadow-yellow" alt>
-      <img loading="lazy" src="img/shadow-yellow-right.png"
+      <img data-aos="fade-up" data-aos-delay="100" loading="lazy"
+        src="img/shadow-yellow.webp" class="shadow-yellow"
+        alt>
+      <img data-aos="fade-up" data-aos-delay="100" loading="lazy"
+        src="img/shadow-yellow-right.webp"
         class="shadow-yellow-right" alt>
       <div class="wrapper">
         <div class="row">
           <div class="col">
-            <img loading="lazy" src="img/join-bottom.png" class="main"
-              alt="about-us">
+            <img data-aos="fade-right" data-aos-delay="100" src="img/hero.gif"
+              class="main" alt="main gif">
           </div>
-          <div class="col2">
+          <div class="col2" data-aos="fade-left" data-aos-delay="100">
             <h2>Join our community</h2>
             <div class="buttons">
-              <a href class="buy-now"><div class="in">
+              <a href="#" class="buy-now"><div class="in">
                   BUY NOW
                 </div></a>
-              <a href class="soc-m">
+              <a href="#" class="soc-m">
                 <img loading="lazy" src="img/tg.svg" alt>
               </a>
-              <a href class="soc-m">
+              <a href="#" class="soc-m">
                 <img loading="lazy" src="img/x.svg" alt>
               </a>
             </div>
@@ -496,11 +558,11 @@
 
     <footer>
       <div class="wrapper">
-        <div class="inside">
-          <a href class="logo">
-            <img loading="lazy" src="img/logo.png" alt="logo">
+        <div class="inside" data-aos="fade-right" data-aos-delay="100">
+          <a href="#" class="logo">
+            <img loading="lazy" src="img/logo.webp" alt="logo">
           </a>
-          <a href class="buy-now"><div class="in">
+          <a href="#" class="buy-now"><div class="in">
               BUY NOW
             </div></a>
         </div>

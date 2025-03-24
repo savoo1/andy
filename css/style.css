@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: luckiest;
   src: url("../fonts/Luckies.woff");
@@ -9,6 +10,7 @@
 body {
   padding: 0;
   margin: 0;
+  top: 0 !important;
 }
 
 h1,
@@ -69,12 +71,35 @@ img {
   width: 100%;
 }
 .navbar .logo {
-  margin-right: 170px;
   display: flex;
+}
+.navbar .soc-md {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar .soc-md .soc-m {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 4px 6px;
+  border-radius: 8px;
+  transition: all ease 0.5s;
+}
+.navbar .soc-md .soc-m img {
+  max-width: 40px;
+}
+.navbar .soc-md .soc-m:hover {
+  background-color: #f6e00e;
+  color: #000;
 }
 .navbar .left-side {
   display: flex;
   gap: 9px;
+}
+.navbar .left-side .only-mobile {
+  display: none;
 }
 .navbar .left-side a {
   display: inline-flex;
@@ -95,6 +120,35 @@ img {
   align-items: center;
   justify-content: center;
   gap: 21px;
+}
+.navbar .right-side .languge {
+  position: relative;
+}
+.navbar .right-side .languge .dropdown {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 150px;
+  background-color: #1a1a1a;
+  border: 1px solid #f6e00e;
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+}
+.navbar .right-side .languge .dropdown a {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+.navbar .right-side .languge .dropdown a:hover {
+  background-color: #f6e00e;
+  color: #000;
+}
+.navbar .right-side .languge .show {
+  display: flex;
 }
 .navbar .right-side .languge .choosen {
   display: inline-flex;
@@ -157,7 +211,7 @@ img {
   top: 0;
   bottom: 0;
   right: 0;
-  background: url("../img/stars.png") no-repeat center bottom;
+  background: url("../img/stars.webp") no-repeat center bottom;
   background-size: cover;
   animation: FRA forwards 1.5s infinite;
   animation-timing-function: linear;
@@ -176,7 +230,7 @@ img {
 }
 .hero {
   min-height: 1250px;
-  background: url("../img/hero-bg.png"), linear-gradient(rgb(0, 0, 0) 100%, rgb(0, 0, 0) 100%);
+  background: url("../img/hero-bg.webp"), linear-gradient(rgb(0, 0, 0) 100%, rgb(0, 0, 0) 100%);
   background-position-y: 90px;
   padding-top: 262px;
   position: relative;
@@ -438,17 +492,19 @@ img {
 .about-us .shadow-yellow {
   position: absolute;
   top: -80px;
-  left: calc(50% - 1800px);
+  right: calc(50% + 200px);
+  width: 1565px;
 }
 .about-us .col .about-us-bg {
   position: absolute;
-  left: calc(50% - 992px);
+  right: calc(50% - 0px);
   bottom: 111px;
+  display: block;
 }
 .about-us .col .main {
   position: absolute;
   width: 720px;
-  bottom: 40px;
+  top: 160px;
   left: calc(50% - 860px);
 }
 .about-us .row {
@@ -514,6 +570,7 @@ img {
   position: absolute;
   top: -150px;
   right: calc(50% - 1800px);
+  width: 1565px;
 }
 .staking .wrapper {
   max-width: 1501px;
@@ -698,7 +755,7 @@ img {
   top: 0;
   bottom: 0;
   right: 0;
-  background: url("../img/tokenomics.png") no-repeat center top;
+  background: url("../img/tokenomics.webp") no-repeat center top;
   background-size: cover;
   z-index: -1;
 }
@@ -709,6 +766,7 @@ img {
   background-color: #000;
   padding-top: 120px;
   min-height: 1200px;
+  overflow: hidden;
 }
 .tokenomics .wrapper {
   position: relative;
@@ -725,7 +783,6 @@ img {
   color: #fff;
   font-family: luckiest;
   font-size: 87px;
-  padding-left: 5px;
   letter-spacing: 5px;
   text-align: center;
   text-shadow: rgb(0, 0, 0) 10px 0px 0px, rgb(0, 0, 0) 9.95004px 0.998334px 0px, rgb(0, 0, 0) 9.80067px 1.98669px 0px, rgb(0, 0, 0) 9.55336px 2.9552px 0px, rgb(0, 0, 0) 9.21061px 3.89418px 0px, rgb(0, 0, 0) 8.77583px 4.79426px 0px, rgb(0, 0, 0) 8.25336px 5.64642px 0px, rgb(0, 0, 0) 7.64842px 6.44218px 0px, rgb(0, 0, 0) 6.96707px 7.17356px 0px, rgb(0, 0, 0) 6.2161px 7.83327px 0px, rgb(0, 0, 0) 5.40302px 8.41471px 0px, rgb(0, 0, 0) 4.53596px 8.91207px 0px, rgb(0, 0, 0) 3.62358px 9.32039px 0px, rgb(0, 0, 0) 2.67499px 9.63558px 0px, rgb(0, 0, 0) 1.69967px 9.8545px 0px, rgb(0, 0, 0) 0.707372px 9.97495px 0px, rgb(0, 0, 0) -0.291995px 9.99574px 0px, rgb(0, 0, 0) -1.28844px 9.91665px 0px, rgb(0, 0, 0) -2.27202px 9.73848px 0px, rgb(0, 0, 0) -3.2329px 9.463px 0px, rgb(0, 0, 0) -4.16147px 9.09297px 0px, rgb(0, 0, 0) -5.04846px 8.63209px 0px, rgb(0, 0, 0) -5.88501px 8.08496px 0px, rgb(0, 0, 0) -6.66276px 7.45705px 0px, rgb(0, 0, 0) -7.37394px 6.75463px 0px, rgb(0, 0, 0) -8.01144px 5.98472px 0px, rgb(0, 0, 0) -8.56889px 5.15501px 0px, rgb(0, 0, 0) -9.04072px 4.2738px 0px, rgb(0, 0, 0) -9.42222px 3.34988px 0px, rgb(0, 0, 0) -9.70958px 2.39249px 0px, rgb(0, 0, 0) -9.89993px 1.4112px 0px, rgb(0, 0, 0) -9.99135px 0.415807px 0px, rgb(0, 0, 0) -9.98295px -0.583741px 0px, rgb(0, 0, 0) -9.8748px -1.57746px 0px, rgb(0, 0, 0) -9.66798px -2.55541px 0px, rgb(0, 0, 0) -9.36457px -3.50783px 0px, rgb(0, 0, 0) -8.96758px -4.4252px 0px, rgb(0, 0, 0) -8.481px -5.29836px 0px, rgb(0, 0, 0) -7.90968px -6.11858px 0px, rgb(0, 0, 0) -7.25932px -6.87766px 0px, rgb(0, 0, 0) -6.53644px -7.56803px 0px, rgb(0, 0, 0) -5.74824px -8.18277px 0px, rgb(0, 0, 0) -4.90261px -8.71576px 0px, rgb(0, 0, 0) -4.00799px -9.16166px 0px, rgb(0, 0, 0) -3.07333px -9.51602px 0px, rgb(0, 0, 0) -2.10796px -9.7753px 0px, rgb(0, 0, 0) -1.12153px -9.93691px 0px, rgb(0, 0, 0) -0.123887px -9.99923px 0px, rgb(0, 0, 0) 0.87499px -9.96165px 0px, rgb(0, 0, 0) 1.86512px -9.82453px 0px, rgb(0, 0, 0) 2.83662px -9.58924px 0px, rgb(0, 0, 0) 3.77978px -9.25815px 0px, rgb(0, 0, 0) 4.68517px -8.83455px 0px, rgb(0, 0, 0) 5.54374px -8.32267px 0px, rgb(0, 0, 0) 6.34693px -7.72764px 0px, rgb(0, 0, 0) 7.0867px -7.0554px 0px, rgb(0, 0, 0) 7.75566px -6.31267px 0px, rgb(0, 0, 0) 8.34713px -5.50686px 0px, rgb(0, 0, 0) 8.8552px -4.64602px 0px, rgb(0, 0, 0) 9.27478px -3.73877px 0px, rgb(0, 0, 0) 9.6017px -2.79415px 0px, rgb(0, 0, 0) 9.83268px -1.82162px 0px, rgb(0, 0, 0) 9.96542px -0.830894px 0px;
@@ -738,7 +795,7 @@ img {
 .tokenomics .wrapper .clippath {
   width: 283px;
   height: 236px;
-  background: url("../img/clip.png");
+  background: url("../img/clip.webp");
   background-position: center center;
   background-repeat: no-repeat;
   display: flex;
@@ -904,7 +961,6 @@ img {
   color: #fff;
   font-family: luckiest;
   font-size: 87px;
-  padding-left: 5px;
   letter-spacing: 5px;
   text-align: center;
   position: relative;
@@ -942,6 +998,7 @@ img {
   border: 2px solid #000;
   border-radius: 100%;
   position: relative;
+  min-width: 30px;
 }
 .faq .faq-card .question .navigator:after {
   width: 13px;
@@ -1003,11 +1060,17 @@ img {
   position: absolute;
   top: -80px;
   left: calc(50% - 1800px);
+  width: 1565px;
 }
 .join-us .shadow-yellow-right {
   position: absolute;
-  top: -200px;
+  top: -50px;
   right: calc(50% - 1800px);
+  width: 1565px;
+}
+.join-us .wrapper {
+  position: relative;
+  z-index: 10;
 }
 .join-us .col .about-us-bg {
   position: absolute;
@@ -1019,6 +1082,7 @@ img {
   width: 720px;
   bottom: 10px;
   left: calc(50% - 830px);
+  transform: scaleX(-1);
 }
 .join-us .row {
   display: flex;
@@ -1103,4 +1167,35 @@ footer p {
   text-align: center;
   letter-spacing: 0.02rem;
   margin-top: 30px;
+}
+
+/* Hide the Google Translate top bar */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+/* Hide the Google Translate pop-up */
+body > .skiptranslate {
+  display: none !important;
+}
+
+/* Hide the Google Translate logo */
+.goog-logo-link {
+  display: none !important;
+}
+
+/* Hide the Google Translate dropdown default styles */
+.goog-te-gadget {
+  font-size: 0px;
+}
+
+/* Ensure page doesn’t shift due to hidden elements */
+.goog-te-gadget span {
+  display: none !important;
+}
+
+/* Optional: If you are using the inline Google Translate dropdown */
+#google_translate_element {
+  position: absolute;
+  opacity: 0;
 }/*# sourceMappingURL=style.css.map */

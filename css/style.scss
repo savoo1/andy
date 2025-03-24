@@ -14,6 +14,7 @@
 body {
 	padding: 0;
 	margin: 0;
+	top: 0 !important;
 }
 h1,
 h2,
@@ -68,12 +69,36 @@ img {
 		width: 100%;
 	}
 	.logo {
-		margin-right: 170px;
+		// margin-right: 170px;
 		display: flex;
+	}
+	.soc-md {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		.soc-m {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #fff;
+			padding: 4px 6px;
+			border-radius: 8px;
+			transition: all ease 0.5s;
+			img {
+				max-width: 40px;
+			}
+			&:hover {
+				background-color: #f6e00e;
+				color: #000;
+			}
+		}
 	}
 	.left-side {
 		display: flex;
 		gap: 9px;
+		.only-mobile {
+			display: none;
+		}
 		a {
 			display: inline-flex;
 			color: #fff;
@@ -95,6 +120,37 @@ img {
 		justify-content: center;
 		gap: 21px;
 		.languge {
+			position: relative;
+
+			.dropdown {
+				position: absolute;
+				top: 55px;
+				left: 0;
+				width: 150px;
+				background-color: #1a1a1a;
+				border: 1px solid #f6e00e;
+				border-radius: 5px;
+				display: none;
+				flex-direction: column;
+				z-index: 10;
+			}
+
+			.dropdown a {
+				padding: 10px;
+				color: #fff;
+				text-decoration: none;
+				display: block;
+				transition: background-color 0.3s ease;
+			}
+
+			.dropdown a:hover {
+				background-color: #f6e00e;
+				color: #000;
+			}
+
+			.show {
+				display: flex;
+			}
 			.choosen {
 				display: inline-flex;
 				color: #fff;
@@ -160,7 +216,7 @@ img {
 	bottom: 0;
 	right: 0;
 
-	background: url("../img/stars.png") no-repeat center bottom;
+	background: url("../img/stars.webp") no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -182,7 +238,7 @@ img {
 
 .hero {
 	min-height: 1250px;
-	background: url("../img/hero-bg.png"), linear-gradient(rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 1) 100%);
+	background: url("../img/hero-bg.webp"), linear-gradient(rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 1) 100%);
 	background-position-y: 90px;
 	padding-top: 262px;
 	position: relative;
@@ -507,18 +563,21 @@ img {
 	.shadow-yellow {
 		position: absolute;
 		top: -80px;
-		left: calc(50% - 1800px);
+		right: calc(50% + 200px);
+		width: 1565px;
 	}
 	.col {
 		.about-us-bg {
 			position: absolute;
-			left: calc(50% - 992px);
+			right: calc(50% - 0px);
 			bottom: 111px;
+			// height: 734px;
+			display: block;
 		}
 		.main {
 			position: absolute;
 			width: 720px;
-			bottom: 40px;
+			top: 160px;
 			left: calc(50% - 860px);
 		}
 	}
@@ -585,6 +644,7 @@ img {
 		position: absolute;
 		top: -150px;
 		right: calc(50% - 1800px);
+		width: 1565px;
 	}
 	.wrapper {
 		max-width: 1501px;
@@ -779,7 +839,7 @@ img {
 	top: 0;
 	bottom: 0;
 	right: 0;
-	background: url("../img/tokenomics.png") no-repeat center top;
+	background: url("../img/tokenomics.webp") no-repeat center top;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -792,6 +852,7 @@ img {
 	background-color: #000;
 	padding-top: 120px;
 	min-height: 1200px;
+	overflow: hidden;
 	.wrapper {
 		position: relative;
 		z-index: 10;
@@ -806,7 +867,7 @@ img {
 			color: #fff;
 			font-family: luckiest;
 			font-size: 87px;
-			padding-left: 5px;
+			// padding-left: 5px;
 			letter-spacing: 5px;
 			text-align: center;
 			text-shadow:
@@ -884,7 +945,7 @@ img {
 		.clippath {
 			width: 283px;
 			height: 236px;
-			background: url("../img/clip.png");
+			background: url("../img/clip.webp");
 			background-position: center center;
 			background-repeat: no-repeat;
 			display: flex;
@@ -1118,7 +1179,7 @@ img {
 		color: #fff;
 		font-family: luckiest;
 		font-size: 87px;
-		padding-left: 5px;
+		// padding-left: 5px;
 		letter-spacing: 5px;
 		text-align: center;
 		position: relative;
@@ -1220,6 +1281,7 @@ img {
 				border: 2px solid #000;
 				border-radius: 100%;
 				position: relative;
+				min-width: 30px;
 			}
 			.navigator:after {
 				width: 13px;
@@ -1287,11 +1349,17 @@ img {
 		position: absolute;
 		top: -80px;
 		left: calc(50% - 1800px);
+		width: 1565px;
 	}
 	.shadow-yellow-right {
 		position: absolute;
-		top: -200px;
+		top: -50px;
 		right: calc(50% - 1800px);
+		width: 1565px;
+	}
+	.wrapper {
+		position: relative;
+		z-index: 10;
 	}
 	.col {
 		.about-us-bg {
@@ -1304,6 +1372,7 @@ img {
 			width: 720px;
 			bottom: 10px;
 			left: calc(50% - 830px);
+			transform: scaleX(-1);
 		}
 	}
 	.row {
@@ -1390,4 +1459,35 @@ footer {
 		letter-spacing: 0.02rem;
 		margin-top: 30px;
 	}
+}
+
+/* Hide the Google Translate top bar */
+.goog-te-banner-frame {
+	display: none !important;
+}
+
+/* Hide the Google Translate pop-up */
+body > .skiptranslate {
+	display: none !important;
+}
+
+/* Hide the Google Translate logo */
+.goog-logo-link {
+	display: none !important;
+}
+
+/* Hide the Google Translate dropdown default styles */
+.goog-te-gadget {
+	font-size: 0px;
+}
+
+/* Ensure page doesn’t shift due to hidden elements */
+.goog-te-gadget span {
+	display: none !important;
+}
+
+/* Optional: If you are using the inline Google Translate dropdown */
+#google_translate_element {
+	position: absolute;
+	opacity: 0;
 }
